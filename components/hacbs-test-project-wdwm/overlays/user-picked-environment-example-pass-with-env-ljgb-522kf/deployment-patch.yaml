@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-wdwm
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/nbe-e2e-houy-tenant/integ-app-gsgu/hacbs-test-project-wdwm@sha256:02757ae43c154165e9fd58ab7ffcdcefd6f8d79d3112168ce185565ac74ea813
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
